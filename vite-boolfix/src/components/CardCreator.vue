@@ -17,9 +17,12 @@ export default {
 </script>
 
 <template>
-    <div class="container " v-for="carta in store.movies">
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="">
+    <div class="container " >
+        <div class="" v-for="carta in store.movies">
+
+            <div class="card" style="width: 18rem;">
+            <img class="card-img-top" alt=""
+            v-bind:src="`https://image.tmdb.org/t/p/original/`+ carta.poster_path">
             <div class="card-body">
                 <h5 class="card-title">{{carta.title}}</h5>
                 <p class="card-text">Original Title: {{carta.original_title}}</p>
@@ -28,6 +31,9 @@ export default {
                 
             </div>
         </div>
+
+        </div>
+
     </div>
 </template>
 
