@@ -1,27 +1,21 @@
 <script setup>
-import Searchbar from './components/Searchbar.vue'
+import SearchingBar from './components/SearchingBar.vue'
 import TheHeader from './components/TheHeader.vue'
+import CardCreator from './components/CardCreator.vue'
 </script>
 
 <template>
   <TheHeader/>
   <div>
-    <Searchbar/>
+    <SearchingBar/>
   </div>
+  <main>
+     <CardCreator/>
+  </main>
 
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+<style lang="scss" scoped>
+@use "../src/styles/partials/variables" as *;
+
 </style>

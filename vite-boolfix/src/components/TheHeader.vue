@@ -4,9 +4,15 @@
 </script>
 
 <template>
- <h1> Boolflix </h1>
+  <header>
+
+    <h1> Boolflix </h1>
+    
+  </header>
+
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use "../src/styles/partials/variables" as *;
 
 </style>
