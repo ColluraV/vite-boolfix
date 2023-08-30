@@ -1,6 +1,6 @@
 <script >
 import StarRating from 'vue-star-rating'
-import { store, discoverMovies } from '../store'
+import { store, discoverSeries,takeFlags } from '../store'
 export default {
 
     data() {
@@ -15,21 +15,7 @@ export default {
     },
 
     methods: {
-        takeFlags(lang){
-            if(lang == "en"){
-                lang= "gb"}
-                if(lang == "ja"){
-                lang= "jp"}
-                if(lang == "ko"){
-                lang= "kr"}
-                if(lang == "zh"){
-                lang= "cn"}
-                if(lang == "da"){
-                lang= "dk"}
-
-
-        return `https://flagsapi.com/`+ lang.toUpperCase()+`/flat/64.png`  
-        },
+        takeFlags,
         takeImg(imgs){
             if(imgs==null){
                 return `https://d994l96tlvogv.cloudfront.net/uploads/film/poster/poster-image-coming-soon-placeholder-no-logo-500-x-740_29376.png`
@@ -40,11 +26,11 @@ export default {
                 return (voto / 2)
             },
         
-        discoverMovies,
+        discoverSeries,
 
     },    
     mounted(){
-            discoverMovies()
+            discoverSeries()
         },
 
 };
@@ -53,15 +39,16 @@ export default {
 </script>
 
 <template>
-    <div class="container " >
-        <div class="" v-for="carta in store.movies">
+    <div id="seriesScroll" class="container-fluid" >
+        
+        <div class="" v-for="carta in store.series">
 
-            <div class="card" style="width: 18rem;">
-            <img class="card-img-top" alt=""
+            <div class="card h-100 mx-3" style="width: 18rem;">
+            <img class="card-img-top h-100" alt=""
             v-bind:src="takeImg(carta.poster_path)">
-            <div class="card-body">
+            <div class="card-body hidden">
                 <h5 class="card-title">{{carta.title}}</h5>
-                <p class="card-text">Original Title: {{carta.original_title}}</p>
+                <p class="card-text">Original Title: {{carta.original_name}}</p>
                 <p class="card-text">Lingua Originale: {{carta.original_language}} 
                     <img  alt=""
                     v-bind:src="takeFlags(carta.original_language)"> </p>

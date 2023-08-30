@@ -21,10 +21,10 @@ export default{
 
 <template>
 
-    <div>
+    <div class="d-flex justify-content-between align-items-center">
         <form @submit.prevent="filterCards" action="">
                     <input type="text" v-model="store.searchtype">
-                    <button @click="filterCards">Cerca</button>
+                    <button class="btn btn-outline-light mx-2" @click="filterCards">Cerca</button>
         </form>
 
 

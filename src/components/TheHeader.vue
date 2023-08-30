@@ -6,7 +6,7 @@
 <template>
   <header>
 
-    <h1> Boolflix </h1>
+    <h1 class="logo"> Boolflix </h1>
     
   </header>
 

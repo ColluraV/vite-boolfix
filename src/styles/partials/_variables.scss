@@ -1,14 +1,52 @@
-main{
-    min-width: 150px;
-    min-height: 150px;
-    border: 1px solid red;
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
+
+
 header{
     text-align: center;
-    border: 1px solid red;
-
 }
+
+.logo{
+    color: red;
+    font-weight: 300;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 .custom-text{
     color: brown;
     width: 150px;
+}
+
+.overflow{
+    overflow-x: auto;
+}
+
+.top-nav{
+    height: 60px;
+    padding: 0 200px;
+}
+
+.orizzontal-bar{
+    height: calc(((100vh) - 153px)/2);
+}
+
+.card-img-top{
+   /* height: calc(((100vh) - 110px)/2);*/
+   object-fit: cover;
+}
+.hidden{
+    display: none;
+}
+::-webkit-scrollbar{
+    height: 4px;
+    width: 4px;
+    background: gray;
+}
+::-webkit-scrollbar-thumb:horizontal{
+    background: #000;
+    border-radius: 10px;
 }
