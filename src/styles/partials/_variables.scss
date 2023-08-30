@@ -39,7 +39,10 @@ header{
    object-fit: cover;
 }
 .hidden{
-    display: none;
+
+    position: absolute;
+    color: white;
+
 }
 ::-webkit-scrollbar{
     height: 4px;
@@ -49,4 +52,7 @@ header{
 ::-webkit-scrollbar-thumb:horizontal{
     background: #000;
     border-radius: 10px;
+}
+.relative{
+    position: relative;
 }
