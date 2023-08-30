@@ -26,7 +26,9 @@ export default {
             <div class="card-body">
                 <h5 class="card-title">{{carta.title}}</h5>
                 <p class="card-text">Original Title: {{carta.original_title}}</p>
-                <p class="card-text">Lingua Originale: {{carta.original_language}} </p>
+                <p class="card-text">Lingua Originale: {{carta.original_language}} 
+                    <img  alt=""
+                    v-bind:src="`https://flagsapi.com/`+ carta.original_language.toUpperCase()+`/flat/64.png`"> </p>
                 <p class="card-text">Voto: {{ carta.vote_average }} / 10</p>
                 
             </div>
