@@ -21,10 +21,12 @@ header{
     width: 150px;
 }
 
-.overflow{
+.overflowx{
     overflow-x: auto;
 }
-
+.overflowy{
+    overflow-y: auto;
+}
 .top-nav{
     height: 60px;
     padding: 0 200px;
@@ -39,9 +41,11 @@ header{
    object-fit: cover;
 }
 .hidden{
-
+    display: none;
     position: absolute;
     color: white;
+    height: 100%;
+
 
 }
 ::-webkit-scrollbar{
@@ -55,4 +59,17 @@ header{
 }
 .relative{
     position: relative;
+}
+
+.card{
+
+    &:hover{
+        
+        .card-body{
+            display: flex;
+            background-color: #000000bd;
+        }
+
+    }
+
 }

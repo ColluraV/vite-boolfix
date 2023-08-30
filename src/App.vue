@@ -15,9 +15,9 @@ import SerieCardCreator from './components/SerieCardCreator.vue';
     <div class="d-flex flex-column">
       <h2 class="text-center text-white">Movies</h2>
 
-      <MovieCardCreator class="d-flex flex-row overflow orizzontal-bar"/>
+      <MovieCardCreator class="d-flex flex-row overflowx orizzontal-bar"/>
       <h2 class="text-center text-white">Tv Series</h2>
-      <SerieCardCreator class="d-flex flex-row overflow orizzontal-bar"/>
+      <SerieCardCreator class="d-flex flex-row overflowx orizzontal-bar"/>
     </div>
 
   </main>

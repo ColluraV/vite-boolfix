@@ -6,7 +6,7 @@ export default {
     data() {
         return {
             store,
-            hover: false
+
         };
     },
 
@@ -44,16 +44,20 @@ export default {
         <div class="" v-for="carta in store.movies">
 
             <div class="card h-100 mx-3" style="width: 18rem;">
-                <img class="card-img-top h-100 relative" @mouseover="hover = true" @mouseleave="hover = false" alt=""
-                    v-bind:src="takeImg(carta.poster_path)">
-                <div class="card-body hidden" v-if="hover">
+                <img class="card-img-top h-100 relative" v-bind:src="takeImg(carta.poster_path)">
+                <div class="flex-column overflowy card-body hidden">
                     <h5 class="card-title">{{ carta.title }}</h5>
                     <p class="card-text">Original Title: {{ carta.original_title }}</p>
+
                     <p class="card-text">Lingua Originale: {{ carta.original_language }}
+
                         <img alt="" v-bind:src="takeFlags(carta.original_language)">
+
                     </p>
                     <star-rating :increment="0.01" :fixed-points="2" :rating="voteConvert(carta.vote_average)"
                         :read-only="true" :star-size="45"></star-rating>
+
+                    <p class="card-text my-3 overflowy">Lore: {{ carta.overview }}</p>
 
                 </div>
             </div>
